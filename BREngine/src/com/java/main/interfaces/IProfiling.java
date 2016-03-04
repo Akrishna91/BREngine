@@ -1,5 +1,6 @@
 package com.java.main.interfaces;
 
+
 public interface IProfiling {
-	public void clean();
+	public String clean(String col);
 }
