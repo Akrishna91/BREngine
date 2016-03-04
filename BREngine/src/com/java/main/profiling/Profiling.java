@@ -8,6 +8,7 @@ import com.java.beans.IntegerCol;
 import com.java.beans.MainData;
 import com.java.beans.StringCol;
 import com.java.main.interfaces.IColumn;
+import com.java.main.utils.StringUtils;
 
 /**
  * Abstract Class which is responsible for profiling data. As of now supporing Null and Special Characters IProfiling
@@ -40,17 +41,28 @@ public class Profiling{
 		NullProfiling nullProfiling = new NullProfiling();
 		SpecialCharactersProfiling specialCharactersProfiling = new SpecialCharactersProfiling();
 		boolean isInt = true;
+		boolean isDouble = true;
+		StringUtils sUtils = new StringUtils();
 		//List<Double> numValues = new ArrayList<Double>();
 		List<Integer> numValues = new ArrayList<Integer>();
+		List<Double> doubValues = new ArrayList<Double>();
 		for (int i = 0; i < col.size(); i++) {
+			col.set(i, specialCharactersProfiling.clean(col.get(i)));
 			if(isInt && isNumeric(col.get(i))){
-				col.set(i, specialCharactersProfiling.clean(col.get(i)));
-				numValues.set(i, Integer.parseInt(nullProfiling.clean(col.get(i))));
 				col.set(i, "0");
+				numValues.set(i, Integer.parseInt(nullProfiling.clean(col.get(i))));
+				doubValues.set(i, 0.0);
+			}else if(isDouble && sUtils.isInt(col.get(i)) ){
+				isInt = false;
+				col.set(i, "0");
+				numValues.set(i, 0);
+				doubValues.set(i, Double.parseDouble(nullProfiling.clean(col.get(i))));
 			}else{
 				isInt = false;
+				isDouble = false;
 				col.set(i, nullProfiling.clean(col.get(i)));
 				numValues.set(i, 0);
+				doubValues.set(i, 0.0);
 			}
 		}
 		if(isInt){
