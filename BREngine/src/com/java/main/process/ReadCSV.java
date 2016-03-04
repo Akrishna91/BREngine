@@ -1,13 +1,8 @@
 package com.java.main.process;
 
 import java.io.File;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Map;
-import java.util.Scanner;
 
 import com.univocity.parsers.common.processor.ColumnProcessor;
 import com.univocity.parsers.common.processor.RowListProcessor;
@@ -31,9 +26,6 @@ public class ReadCSV {
 		//"C:\\MyData\\SSLC_Data_For_Analysis\\wmdata.csv"
 		File file = new File(path);
 		parser.parse(file);
-
-		String[] c = rowProcessor.getHeaders();
-		List<String[]> rows = rowProcessor.getRows();
 
 		ColumnProcessor colProcessor = new ColumnProcessor();
 		parserSettings.setRowProcessor(colProcessor);

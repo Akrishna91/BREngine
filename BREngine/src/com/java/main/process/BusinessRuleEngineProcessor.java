@@ -18,6 +18,7 @@ public class BusinessRuleEngineProcessor {
 		LinkedHashMap<String, List<String>> tempData =  ReadCSV.main(args[0]);
 		Profiling profiling = new Profiling();
 		MainData mainData = profiling.cleanProfile(tempData);
+		System.out.println(mainData);
 	}
 
 }

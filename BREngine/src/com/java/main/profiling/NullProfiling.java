@@ -1,9 +1,5 @@
 package com.java.main.profiling;
 
-import java.util.ArrayList;
-
-import com.java.beans.IntegerCol;
-import com.java.beans.StringCol;
 import com.java.main.interfaces.IProfiling;
 
 /**

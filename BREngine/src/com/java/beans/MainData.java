@@ -8,7 +8,6 @@ import com.java.main.interfaces.IColumn;
 public class MainData {
 
 	private LinkedHashMap<String, IColumn> col_values;
-	private int ind = 0;
 
 	public void setCol_values(LinkedHashMap<String, IColumn> col_values) {
 		this.col_values = col_values;
