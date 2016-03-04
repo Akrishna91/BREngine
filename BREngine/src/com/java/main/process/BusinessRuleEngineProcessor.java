@@ -3,7 +3,7 @@ package com.java.main.process;
 import java.util.LinkedHashMap;
 import java.util.List;
 
-import com.java.beans.MainData;
+import com.java.main.beans.MainData;
 import com.java.main.profiling.Profiling;
 
 /**
@@ -18,6 +18,7 @@ public class BusinessRuleEngineProcessor {
 		LinkedHashMap<String, List<String>> tempData =  ReadCSV.main(args[0]);
 		Profiling profiling = new Profiling();
 		MainData mainData = profiling.cleanProfile(tempData);
+		System.out.println(mainData);
 	}
 
 }

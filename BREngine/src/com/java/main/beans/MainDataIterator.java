@@ -1,4 +1,4 @@
-package com.java.beans;
+package com.java.main.beans;
 
 import com.java.main.interfaces.IColumn;
 import com.java.main.interfaces.Iterator;

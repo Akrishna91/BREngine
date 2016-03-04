@@ -1,6 +1,5 @@
-package com.java.beans;
+package com.java.main.beans;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 public class DataSummary {

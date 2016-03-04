@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 
-import com.java.beans.IntegerCol;
-import com.java.beans.MainData;
-import com.java.beans.StringCol;
+import com.java.main.beans.IntegerCol;
+import com.java.main.beans.MainData;
+import com.java.main.beans.StringCol;
 import com.java.main.interfaces.IColumn;
 import com.java.main.utils.StringUtils;
 
