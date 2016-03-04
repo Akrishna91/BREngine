@@ -3,7 +3,7 @@ package com.java.main.process;
 import java.util.LinkedHashMap;
 import java.util.List;
 
-import com.java.beans.MainData;
+import com.java.main.beans.MainData;
 import com.java.main.profiling.Profiling;
 
 /**
